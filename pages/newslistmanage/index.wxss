@@ -1,0 +1,110 @@
+/* pages/newslistmanage/index.wxss */
+.section-warn{
+  height: 44px;
+  /* background: #888888;  */
+  position: relative;
+}
+.section-warn text{
+  font-size: 14px;
+  color: #888888;
+  position:absolute;  
+  bottom:12px;
+  left:15px;
+}
+.addnews .btn-icon{
+  height:48px;
+  width:48px;
+  position: fixed;
+  z-index: 100;
+  bottom: 100px;
+  left: 75%;
+  right: 0;
+  margin: 20px;
+}
+.addnews .addnews-btnname{
+  text-align: center;
+  font-size: 14px;
+  color: #00a8f1;
+  margin:5px;
+}
+.section{
+  height: 92px;
+  width: 100%;
+  border-bottom:0.5px solid #e5e5e5;
+  background: #ffffff;
+}
+.section .newslistmanage-image{
+  height: 92px;
+  float: left;
+}
+.section .newslistmanage-info{
+  height:60px;
+  width:70%;
+  float:left;
+  padding:16px 0 16px 0;
+  padding-bottom:16px;
+}
+.section .newslistmanage-image image{
+  height:60px;
+  width:60px;
+  margin:16px 14px 16px 15px;
+  background: lightgray;
+}
+.section .newslistmanage-info .newslistmanage-title{
+  height: 40%;
+}
+.section .newslistmanage-info .newslistmanage-title text{
+  font-size: 17px;
+  color: #353535;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  display:block;
+  margin:3px 0;
+}
+.section .newslistmanage-info .newslistmanage-desc{
+  height: 30%;
+}
+.section .newslistmanage-info .newslistmanage-desc text{
+  font-size: 13px;
+  color: #b2b2b2;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  display:block;
+  margin:3px 0;
+}
+.section .newslistmanage-info .newslistmanage-date{
+  height: 30%;
+}
+.section .newslistmanage-info .newslistmanage-date text{
+  font-size: 11px;
+  color: #888888;
+  display:block;
+}
+.btn{
+  background: #00a8f1;
+  margin: 10px auto;
+  height: 40px;
+  width: 90%;
+  border-radius:5px;
+  text-align: center;
+  line-height: 40px;
+  color: #ffffff;
+  font-size:17px;
+  position: fixed;
+  z-index: 100;
+  bottom: 0;
+  left: 0;
+  right: 0; 
+  /* background-size: "cover"; */
+}
+.reachBottom {
+  margin: 0px;
+  padding: 0px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #f5f5f5;
+  text-align: center;
+  font-size: 13px;
+}

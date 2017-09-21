@@ -1,0 +1,135 @@
+<!--pages/manage/index.wxml-->
+
+<view class="line"></view>
+<view class="section">
+  <navigator url="/pages/webmenumanage/index?nextNewsId={{nextNewsId}}&nextProductsId={{nextProductsId}}" hover-class="navigator-hover">
+    <view class='manage-image'>
+      <image class="userinfo-avatar" src="{{imgsrc}}menu.png"></image>
+    </view>
+    <view class='manageinfo'>
+      <view class="manage-title">
+        <text>网站菜单管理</text>
+      </view>
+      <view class="manage-desc">
+        <text>修改网站菜单名字</text>
+      </view>
+    </view>
+  </navigator>
+  <view class="point">
+    <image src="{{imgsrc}}Path@2x.png"></image>
+  </view>
+</view>
+<view class="section">
+  <navigator url="/pages/logomanage/index?nextNewsId={{nextNewsId}}&nextProductsId={{nextProductsId}}" hover-class="navigator-hover">
+    <view class='manage-image'>
+      <image class="userinfo-avatar" src="{{imgsrc}}logo-@2x.png"></image>
+    </view>
+    <view class='manageinfo'>
+      <view class="manage-title">
+        <text>网站logo管理</text>
+      </view>
+      <view class="manage-desc">
+        <text>上传于修改网站logo</text>
+      </view>
+    </view>
+  </navigator>
+  <view class="point">
+    <image src="{{imgsrc}}Path@2x.png"></image>
+  </view>
+</view>
+
+<view wx:for="{{systemList}}" wx:for-index="idx" wx:for-item="item">
+  <view wx:if="{{item.name == '新闻中心'}}">
+    <view bindtap="navigate" data-next-product-id="{{nextProductsId}}" data-system-id="{{item.system_id}}" data-type-id="{{item.type_id}}" class="section">
+      <view class='manage-image'>
+        <image class="userinfo-avatar" src="{{imgsrc}}news@2x.png"></image>
+      </view>
+      <view class='manageinfo'>
+        <view class="manage-title">
+          <text>{{item.name}}管理</text>
+        </view>
+        <view class="manage-desc">
+          <text>管理公司动态、新闻活动</text>
+        </view>
+      </view>
+    <view class="point">
+      <image src="{{imgsrc}}Path@2x.png"></image>
+    </view>
+  </view>
+  </view>
+</view>
+<view wx:for="{{systemList}}" wx:for-index="idx" wx:for-item="item">
+  <view wx:if="{{item.name == '产品中心'}}">
+    <view bindtap="navigate" data-system-id="{{item.system_id}}" data-type-id="{{item.type_id}}" class="section">
+      <view class='manage-image'>
+        <image class="userinfo-avatar" src="{{imgsrc}}product@2x.png"></image>
+      </view>
+      <view class='manageinfo'>
+        <view class="manage-title">
+          <text>{{item.name}}管理</text>
+        </view>
+        <view class="manage-desc">
+          <text>管理公司产品信息</text>
+        </view>
+      </view>
+    <view class="point">
+      <image src="{{imgsrc}}Path@2x.png"></image>
+    </view>
+  </view>
+  </view>
+</view>
+<!-- <view bindtap="navigate" data-system-id="{{systemList[0]['system_id']}}" data-type-id="{{systemList[0]['type_id']}}" class="section">
+    <view class='manage-image'>
+      <image class="userinfo-avatar" src="{{imgsrc}}product@2x.png"></image>
+    </view>
+    <view class='manageinfo'>
+      <view class="manage-title">
+        <text>{{systemList[0]['name']}}列表管理</text>
+      </view>
+      <view class="manage-desc">
+        <text>这里可以管理网站里面的商品展示信息</text>
+      </view>
+    </view>
+  <view class="point">
+    <image src="{{imgsrc}}Path@2x.png"></image>
+  </view>
+</view>
+<view bindtap="navigate" data-system-id="{{systemList[1]['system_id']}}" data-type-id="{{systemList[1]['type_id']}}" class="section">
+    <view class='manage-image'>
+      <image class="userinfo-avatar" src="{{imgsrc}}news@2x.png"></image>
+    </view>
+    <view class='manageinfo'>
+      <view class="manage-title">
+        <text>{{systemList[1]['name']}}列表管理</text>
+      </view>
+      <view class="manage-desc">
+        <text>这里可以管理公司的产品动态，新闻，活动</text>
+      </view>
+    </view>
+  <view class="point">
+    <image src="{{imgsrc}}Path@2x.png"></image>
+  </view>
+</view> -->
+
+<view class="section_web">
+  <view  data-api-url="{{item.api_url}}" data-host-id="{{item.host_id}}">
+    <view class='webimage'>
+      <image mode="aspectFit" src="{{imgsrc}}icon@2x.png"></image>
+    </view>
+    <view class='webinfo'>
+      <view class='webname'>
+       <image wx:if="{{hostInfo.is_trial == 1}}" mode="aspectFit" src="{{imgsrc}}official@2x.png"></image>
+      <image wx:if="{{hostInfo.is_trial == 0}}" mode="aspectFit" src="{{imgsrc}}try@2x.png"></image> 
+      <text>{{hostInfo.name}}</text></view>
+      <view class='webip'>网站IP：{{hostInfo.ip}}</view>
+      <view class='weburl'>域名：{{hostInfo.domain}}</view>
+      <view class='webspace'>网站空间：{{hostInfo.space_used}}G(共{{hostInfo.space}}G)</view>
+    </view>
+  </view>
+</view> 
+<view class='clipboarddata'>
+  <view class='copy'>{{hostInfo.domain}}</view>
+  <view class='warn' bindtap='copy'>点我复制</view>
+  <view class='tips'>复制以上网址到浏览器查看发布的内容</view>
+</view>
+

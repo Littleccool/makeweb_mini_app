@@ -1,0 +1,26 @@
+<!--pages/addnewscontent/index.wxml-->
+<view wx:for="{{contentimgs}}" wx:for-index="idx" wx:for-item="item">
+  <view class="section">
+    <view class="pic-icon" bindtap="actionSheetTap" data-image-index="{{idx}}">
+      <image src="{{imgsrc}}picture@2x.png"></image>
+    </view>
+    <view class="content-info">
+      <view class="content">
+        <textarea value="{{contenttexts[idx]}}" bindinput="getcontenttext" placeholder="请添加文字或图片" data-content-index="{{idx}}" />
+      </view>
+       <view hidden='{{item.contentimgishidden}}' class="contentimg">
+        <image mode='aspectFit' src='{{item.contentimg}}'></image>
+      </view> 
+    </view>
+  </view>
+</view>
+<view bindtap='jump'>
+  <button class='btn' hover-stay-time="100" hover-class="disable-btn">保存</button>
+</view>
+<!-- 
+<action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetbindchange">
+    <block wx:for-items="{{actionSheetItems}}">
+        <action-sheet-item bindtap="bind{{item.bindtap}}">{{item.txt}}</action-sheet-item>
+    </block>
+    <action-sheet-cancel class="cancel">取消</action-sheet-cancel>
+</action-sheet> -->

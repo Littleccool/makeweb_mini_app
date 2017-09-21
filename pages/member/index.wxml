@@ -1,0 +1,44 @@
+<!--index.wxml-->
+<view class="section_ad">
+  <image src="{{imgsrc}}sdjz@2x.png"></image>
+</view>
+<view class="section_userinfo">
+  <view class='userinfo'>
+    <view class="userinfo-nickname">
+      <text>{{userInfo.nickName}}</text>
+    </view>
+    <view class="userinfo-number">
+      <text>绑定账号： {{username}}</text>
+    </view>
+  </view>
+  <view class="logo">
+       <image mode="aspectFill" src="{{userInfo.avatarUrl}}"></image>   
+  </view>
+</view>
+<view wx:if="{{hostList}}">
+  <view wx:for="{{hostList}}" wx:for-index="idx" wx:for-item="item">
+    <view class="section_web">
+      <view  bindtap="redirect" data-api-url="{{item.api_url}}" data-host-id="{{item.host_id}}" hover-class="navigator-hover">
+        <view class='webimage'>
+          <image mode="aspectFit" src="{{imgsrc}}icon@2x.png"></image>
+        </view>
+        <view class='webinfo'>
+          <view class='webname'>
+          <image wx:if="{{item.is_trial == 1}}" mode="aspectFit" src="{{imgsrc}}official@2x.png"></image>
+          <image wx:if="{{item.is_trial == 0}}" mode="aspectFit" src="{{imgsrc}}try@2x.png"></image>
+          <text>{{item.name}}</text></view>
+          <view class='webip'>网站IP：{{item.ip}}</view>
+          <view class='weburl'>域名：{{item.domain}}</view>
+          <view class='webspace'>网站空间：{{item.space_used}}G(共{{item.space}}G)</view>
+        </view>
+      </view>
+    </view> 
+  </view>
+</view>
+<view wx:else>
+  sadfsdf
+</view>
+
+
+
+

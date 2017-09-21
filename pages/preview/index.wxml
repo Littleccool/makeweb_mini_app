@@ -1,0 +1,20 @@
+<!--pages/preview/index.wxml-->
+<import src="../../wxParse/wxParse.wxml"/> 
+<view class='header'>
+  <view class='title'>
+    <text>{{title}}</text>
+  </view>
+  <view class='date'>
+    <view class='part1'>2017-09-15</view>
+    <view class='part2'>{{category_name ? category_name : ''}}</view>
+  </view>
+</view>
+<view class='desc'>
+  {{synopsis}}
+</view>
+<view class='coverImg'>
+  <image mode="aspectFit" src='{{coverImgSrc}}'></image>
+</view>
+<view class='info'>
+   <template is="wxParse" data="{{wxParseData:info.nodes}}"/> 
+</view>

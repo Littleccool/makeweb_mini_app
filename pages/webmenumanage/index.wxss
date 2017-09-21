@@ -1,0 +1,77 @@
+/* pages/webmenumanage/index.wxss */
+.line{
+  border-bottom: 0.5px solid #e5e5e5;
+}
+.section-warn{
+  height: 44px;
+  /* background: #888888;  */
+  position: relative;
+  border-bottom: 0.5px solid #e5e5e5;
+}
+.section-warn text{
+  font-size: 14px;
+  color: #888888;
+  position:absolute;  
+  bottom:12px;
+  left:15px;
+}
+.section-btn{
+  height: 44px;
+  position: relative;
+  border-bottom: 0.5px solid #e5e5e5;
+  background:#ffffff;  
+}
+.section-btn .btn-icon{
+  height: 16px;
+  width: 16px;
+  padding-right: 10px;
+  padding-left:15px;
+  position:absolute;  
+  bottom:12px;
+}
+.section-btn .btn-name{
+  font-size: 18px;
+  color: #00a8f1;
+  position:absolute;  
+  bottom:10px;
+  padding-left:41px;
+}
+.container .section_title{
+  height: 44px;
+  position: relative;
+  /* background: gray; */
+  border-bottom: 0.5px solid #e5e5e5;
+  background:#ffffff; 
+}
+.container .section_title text{
+  font-size: 17px;
+  color: #353535;
+  position:absolute;  
+  bottom:12.5px;
+  left:15px;
+}
+.btn{
+  background: #00a8f1;
+  margin: 30px auto;
+  height: 40px;
+  width: 90%;
+  border-radius:5px;
+  text-align: center;
+  line-height: 40px;
+  color: #ffffff;
+  font-size:17px;
+  /* background-size: "cover"; */
+}
+input{
+  display:block;
+  height:72rpx;
+  text-overflow:clip;
+  overflow:hidden;
+  white-space:nowrap;
+  border-radius:8rpx;
+  line-height:72rpx;
+  margin:8px 0 8px 0;
+  padding-left:15px;
+  border:1px solid#e5e5e5;
+  color:black;
+}

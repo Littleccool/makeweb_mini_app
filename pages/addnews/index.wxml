@@ -1,0 +1,49 @@
+<!--pages/addnews/index.wxml-->
+<view class="cover" bindtap='coveractionSheetTap' data-upload-pic-type='coverpic'>
+  <image mode='aspectFit' src="{{coverImgSrc}}"></image>
+</view>
+<!-- <action-sheet hidden="{{coveractionSheetHidden}}" bindchange="coveractionSheetbindchange">
+    <block wx:for-items="{{coveractionSheetItems}}">
+        <action-sheet-item bindtap="bind{{item.bindtap}}">{{item.txt}}</action-sheet-item>
+    </block>
+    <action-sheet-cancel class="cancel">取消</action-sheet-cancel>
+</action-sheet> -->
+
+<view class="clear"></view>
+<view class="section">
+  <input class="input" type="text" placeholder="请输入标题" bindblur='getTitle'/>
+</view>
+<view class="clear"></view>
+<view class="section desc">
+  <textarea bindblur='getSynopsis' placeholder='请输入内容简介' maxlength='250'></textarea>
+</view>
+<view class="clear"></view>
+
+<view class="section selecttype" bindtap='actionSheetTap'>
+  <view class='select'>
+    <text>{{categoryName ? categoryName : '选择分类'}}</text>
+  </view>
+  <view class="point">
+    <image src="{{imgsrc}}Path@2x.png"></image>
+  </view>
+</view>
+<action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetbindchange">
+    <block wx:for-items="{{actionSheetItems}}"  wx:for-item="item">
+        <action-sheet-item bindtap='getCategoryId' data-name="{{item.name}}" data-id="{{item.id}}">{{item.name}}</action-sheet-item>
+    </block>
+    <action-sheet-cancel class="cancel">取消</action-sheet-cancel>
+</action-sheet>
+<view class="clear"></view>
+<navigator url="/pages/addnewscontent/index" hover-class="navigator-hover">
+  <view class="section">
+    <input disabled='true' value="{{info ? info : ''}}" class="input" type="text" placeholder="请输入正文内容" />
+  </view>
+</navigator> 
+<view class="clear"></view>
+<view class='btn'>
+  <!-- <view bindtap='preview' class="preview" hover-stay-time="100" hover-class="disable-btn">预览</view> -->
+  <view bindtap='publish' class="publish" hover-stay-time="100" hover-class="disable-btn">发布</view>
+</view>
+
+
+

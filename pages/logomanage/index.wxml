@@ -1,0 +1,21 @@
+<!--pages/logomanage/index.wxml-->
+<view class="section-warn">
+    <text>网站小logo</text>
+</view>
+<view data-logo-res-id="{{logo_res_id}}" class="logo" data-small="small" bindtap='actionSheetTap'>
+    <image src="{{logo_url?logo_url:defaultImgSrc}}"></image>
+</view>
+<view class="section-warn">
+    <text>网站Banner</text>
+</view>
+<view data-banner-res-id="{{banner_res_id}}" class="banner" data-small="big" bindtap='actionSheetTap'>
+    <image src="{{banner_url?banner_url:defaultImgSrc}}"></image>
+</view>
+<view class="btn" bindtap="publish" hover-stay-time="100" hover-class="disable-btn">下一步</view>
+
+<!-- <action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetbindchange">
+    <block wx:for-items="{{actionSheetItems}}">
+        <action-sheet-item data-issmall="{{issmall}}" bindtap="bind{{item.bindtap}}">{{item.txt}}</action-sheet-item>
+    </block>
+    <action-sheet-cancel class="cancel">取消</action-sheet-cancel>
+</action-sheet> -->

@@ -1,0 +1,74 @@
+/**index.wxss**/
+.headContainer{
+  height: 201px;
+  width: 100%;
+  /* background: gray; */
+  text-align: center;
+}
+.headContainer .logo{
+  margin-top: 15px;
+  height:80px;
+  width: 80px;
+  margin-bottom: 110px;
+  border-radius: 12%;
+}
+.bodyContainer{
+  /* background: green; */
+  height: 88px;
+  width: 100%;
+}
+.bodyContainer .user{
+  height: 30px;
+  /* background: blue; */
+  padding-bottom: 14px;
+  padding-top: 14px;
+}
+.bodyContainer .user .userIcon{
+  /* background: lightbule; */
+  float:left;  
+  width:35%;
+}
+.bodyContainer .user .userIcon image{
+  height: 21px;
+  width: 21px;
+  margin-left: 15px;
+  /* margin-top: 3px; */
+}
+.bodyContainer .user .userInput{
+  float: left;
+  width:65%;
+} 
+.bodyContainer .user .userInput input{
+  margin-right: 60px;
+  font-size: 17px;
+  color: #000000;
+} 
+.split{
+  height: 0.5px;
+  /* background: #e5e5e5; */
+}
+.btnContainer{
+  text-align: center;
+  /* background: green; */
+  margin-top:28px;
+  margin-bottom: 25px;
+}
+.btnContainer .btnOk{
+  background: #00a8f1;
+  width: 90%;
+  color:#ffffff;
+  /* border-radius: 5%; */
+}
+.btnContainer .btnClick{
+  background:lightblue;
+}
+.notice{
+  text-align: center;  
+  /* background: red; */
+  width: 75%;
+  font-size: 14px;
+  color: #888888;
+  margin-left:12.5%;
+}
+
+

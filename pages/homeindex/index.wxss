@@ -1,0 +1,137 @@
+/* pages/homeindex/index.wxss */
+.nav{
+  height: 96rpx;
+  width: 100%;
+  /* background: gray; */
+}
+.nav .nav1{
+  height: 96rpx;
+  float: left;
+}
+.nav .nav1 image{
+  /* background: yellow; */
+  width: 173px;
+  height: 21px;
+  margin-left: 15px;
+  margin-top: 27rpx;
+}
+.nav .nav2{
+  height: 96rpx;
+  float: right;
+}
+.nav .nav2 image{
+  /* background: yellow; */
+  width: 24px;
+  height: 24px;
+  margin-right: 15px;
+  margin-top: 24rpx;
+}
+.mainImage{
+  height: 360rpx;
+  width: 100%;
+  background: green; 
+}
+.mainImage image{
+  height: 360rpx;
+  width: 100%;
+}
+.controduct{
+  background: #ffffff;
+  padding-top:48rpx;
+}
+.splid{
+  height: 4rpx; 
+  width: 72rpx;
+  background: #e5e5e5;  
+  margin: 0 auto;
+}
+.controduct .controductTile{
+  text-align: center;
+  font-size: 18px;
+  color: #353535;
+  margin-bottom: 16rpx;
+  /* background: lightblue; */
+}
+.controduct .controductContent{
+  padding: 36rpx 30rpx 0 30rpx;
+  /* background: yellow; */
+  font: 14px;
+  color: #353535;
+  line-height: 36px;
+  margin-bottom: 42rpx;
+}
+.more{
+  text-align: center;
+  font: 14px;
+  color: #888888;
+  margin-bottom: 50rpx;
+}
+.productShow{
+  margin-top: 20rpx;
+  background: #ffffff;
+}
+.productShow .productShowTile{
+  text-align: center;
+  padding-top: 48rpx;
+  font-size: 18px;
+  color: #353535;
+  margin-bottom: 36rpx;
+}
+.productShow{
+  text-align: center;
+}
+.productShow .productShowImgs{
+  background: yellow;
+  width: 712rpx;
+  margin: 0 auto;
+}
+.productShow .productShowImgs .productShowImg{
+  background: gray;
+  margin: 0 8rpx 40rpx 8rpx;
+  float: left;
+  border-radius: 2%;
+}
+.productShow .productShowImgs .productShowImg image{
+  height: 340rpx;
+  width: 340rpx;
+  background: green;
+}
+.productShow .productShowImgs .productShowImg text{
+  display: block;
+  margin-top: 6px;
+  font-size: 14px;
+  color: #353535;
+}
+.btn{
+  height: 48px;
+  line-height: 48px;
+  background: #00a8f1;
+  margin-top:10px;
+}
+.btn .phone{
+  float: left;
+  width: 49%;
+  height: 48px;
+  text-align: center;
+  border-right:0.1rpx solid #ffffff;
+  color: #ffffff;
+}
+.btn .phone image{
+  height: 48rpx;
+  width: 48rpx;
+  vertical-align:middle;  
+  margin-right: 24rpx;
+}
+.btn .share{
+  float: left;
+  width: 50%;
+  height: 48px;
+  text-align: center;
+  color: #ffffff;
+}
+.btn .share image{
+  height: 48rpx;
+  width: 48rpx;
+  vertical-align:middle;  
+  margin-right: 24rpx;
+}

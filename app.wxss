@@ -1,0 +1,9 @@
+/**app.wxss**/
+page {
+  -webkit-user-select:none;
+  user-select:none;
+  height:100%;
+  width:100%;
+  overflow-x:hidden;
+  background:#f8f8f8;
+}

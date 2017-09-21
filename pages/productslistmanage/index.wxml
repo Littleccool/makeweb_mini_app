@@ -1,0 +1,42 @@
+<!--pages/newslistlistmanage/index.wxml-->
+<!-- <view class="section-warn">
+    <text>编辑产品</text>
+</view> -->
+<view class="addnews">
+  <navigator url="/pages/addproducts/index?system_id={{nextProductsId}}" hover-class="navigator-hover">
+    <image class="btn-icon" src="{{imgsrc}}productsicon.png"></image>
+    <!-- <text class="btn-name">新增产品</text> -->
+  </navigator>
+</view>
+<scroll-view style="height:100%" scroll-y="true" bindscrolltolower="loadMore"> 
+  <view wx:for="{{productList}}" wx:for-item="item">
+    <view class="section" bindtap='actionSheetTap' data-id='{{item.id}}'>
+      <!-- <navigator url="" hover-class="navigator-hover"> -->
+        <view class='newslistmanage-image'>
+          <image class="news-image" src="{{item.img_path}}"></image>
+        </view>
+        <view class='newslistmanage-info'>
+          <view class="newslistmanage-title">
+            <text>{{item.title}}</text>
+          </view>
+          <view class="newslistmanage-desc">
+            <text>{{item.synopsis ? item.synopsis :""}}</text>
+          </view>
+          <view class="newslistmanage-date">
+            <text>{{item.time ? item.time : ""}}</text>
+          </view>
+        </view>
+      <!-- </navigator> -->
+    </view>
+  </view>
+</scroll-view>
+<view class="reachBottom" hidden="{{reachBottom ? false : true}}">没有更多。</view>
+<view style="height:60px;"></view>  
+<view class="btn" bindtap="next" hover-stay-time="100" hover-class="disable-btn">完成</view>
+<!--底部弹出框-->
+<!-- <action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetbindchange">
+    <block wx:for-items="{{actionSheetItems}}">
+        <action-sheet-item bindtap="bind{{item.bindtap}}">{{item.txt}}</action-sheet-item>
+    </block>
+    <action-sheet-cancel class="cancel">取消</action-sheet-cancel>
+</action-sheet> -->

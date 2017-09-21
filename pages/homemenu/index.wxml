@@ -1,0 +1,38 @@
+<!--pages/homemenu/index.wxml-->
+<view class='nav'>
+  <view class='nav1'>
+    <image src="{{homeimgsrc}}pic@2x.png"></image>
+  </view>
+  <view class='nav2'>
+    <image src="{{homeimgsrc}}menu@2x.png"></image>
+  </view>
+</view>
+<view class='splid'></view>
+<view class='menu'>
+  <view class='menuTitle'>关于我们</view>
+  <view class='menuPoint'>
+    <image src="{{homeimgsrc}}Path@2x.png"></image>
+  </view>
+</view>
+<view class='splid'></view>
+<view class='menu'>
+  <view class='menuTitle'>新闻中心</view>
+  <view class='menuPoint'>
+    <image src="{{homeimgsrc}}Path@2x.png"></image>
+  </view>
+</view>
+<view class='splid'></view>
+<view class='menu'>
+  <view class='menuTitle'>产品中心</view>
+  <view class='menuPoint'>
+    <image src="{{homeimgsrc}}Path@2x.png"></image>
+  </view>
+</view>
+<view class='splid'></view>
+<view class='menu'>
+  <view class='menuTitle'>联系我们</view>
+  <view class='menuPoint'>
+    <image src="{{homeimgsrc}}Path@2x.png"></image>
+  </view>
+</view>
+<view class='splid'></view>

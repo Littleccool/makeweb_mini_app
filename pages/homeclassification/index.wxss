@@ -1,0 +1,141 @@
+/** 顶部导航栏样式开始**/
+.nav{
+  height: 96rpx;
+  width: 100%;
+  /* background: gray; */
+}
+.nav .nav1{
+  height: 96rpx;
+  float: left;
+}
+.nav .nav1 image{
+  /* background: yellow; */
+  width: 173px;
+  height: 21px;
+  margin-left: 15px;
+  margin-top: 27rpx;
+}
+.nav .nav2{
+  height: 96rpx;
+  float: right;
+}
+.nav .nav2 image{
+  /* background: yellow; */
+  width: 24px;
+  height: 24px;
+  margin-right: 15px;
+  margin-top: 24rpx;
+}
+/** 顶部导航栏样式结束**/
+
+/** 横向滚动导航栏样式开始**/
+.navbar{
+  background: #ffffff; 
+  height: 50px;
+  width: 100%;
+  white-space: nowrap;
+}
+.navbar .item{
+  position: relative;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  width: 33%;
+  display: inline-block;
+  /* background: green; */
+  font-size: 15px;
+  color: #b2b2b2;
+}
+.navbar .item.active{
+  font-size: 15px;
+  color: #00a8f1;
+}
+.navbar .item.active:after{
+  height: 4rpx;
+  width: 64rpx;
+  background: #00a8f1;  
+  margin: 0 auto;
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+/** 横向滚动导航栏样式结束**/
+
+/**分割线**/
+.split{
+  height: 0.5px;
+  /* width: 100%; */
+  background: #e5e5e5;
+}
+
+/** 商品样式开始**/
+.goods{
+  margin-top: 15px;
+  margin-bottom: 20px;
+  width: 90%;
+  height: 400px;
+  margin: 15px auto;
+  border: 0.5px solid #e5e5e5;
+  background: #ffffff;
+  border-radius: 4%;
+}
+.goods .goodsTitle{
+  margin: 18px 15px 5px 15px;
+  font-size: 19px;
+  height: 38px;
+  color: #353535;
+  overflow: hidden;
+  line-height:19px;
+}
+.goods .goodsDate{
+  margin: 5px 15px 18px 15px;
+  font-size: 13px;
+  color: #888888;
+}
+.goods .goodsImg{
+  margin: 0 15px 0 15px;
+  height: 178px;
+   background: gray; 
+}
+.goods .goodsDesc{
+  height: 34px;
+  margin: 18px 15px 18px 15px;
+  font-size: 14px;
+  line-height: 17px;
+  color: #888888;
+  overflow: hidden;
+  /* text-overflow:ellipsis;
+  white-space:nowrap; */
+}
+.goods .split{
+  margin: 0 15px 0 15px;
+}
+.goods .showDetail{
+  /* background: green; */
+  margin: 0 15px 0 15px;
+  height: 44px;
+  line-height: 44px;
+  font-size: 14px;
+  color: #353535;
+}
+.goods .showDetail .showDetailName{
+  float: left;
+}
+.goods .showDetail .showDetailImg{
+  float: right;
+}
+.goods .showDetail .showDetailImg image{
+  width: 12px;
+  height: 16px;
+  vertical-align: middle;
+}
+/** 商品样式结束**/
+ swiper{
+  height: 100%;
+} 
+.listView{
+  height: 100%;
+}

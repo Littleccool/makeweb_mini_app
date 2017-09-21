@@ -1,0 +1,35 @@
+<!--index.wxml-->
+<view class='headContainer'>
+  <image class='logo' src="{{imgsrc}}logo@2x.png"></image>
+</view>
+<view class='bodyContainer'>
+  <view class='user'>
+    <view class='userIcon'>
+      <image src="{{imgsrc}}iconfont-avatar2@2x.png"></image>
+    </view>
+    <view class='userInput'>
+      <input type='text' bindinput='getUserName' value="{{username}}" placeholder='请输入手机号码'></input>
+    </view>
+  </view>
+  <view class='split'></view>
+  <view class='user'>
+    <view class='userIcon'>
+      <image src="{{imgsrc}}LOCK@2x.png"></image>
+    </view>
+    <view class='userInput'>
+      <input type='password' bindinput='getPassword' value="{{password}}" placeholder='请输入登录密码'></input>
+    </view>
+  </view>
+  <view class='split'></view>
+  <view class='btnContainer'>
+    <button hover-class='btnClick' class='btnOk' bindtap='login'>登录</button>
+  </view>
+  <view class='notice'>
+    <text>新用户请在电脑上访问http://sd.35.com注册账号</text>
+  </view>
+</view>
+
+
+
+
+

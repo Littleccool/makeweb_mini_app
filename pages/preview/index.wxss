@@ -1,0 +1,53 @@
+/* pages/preview/index.wxss */
+.header{
+  background: #ffffff;
+  padding-top: 15px;
+  padding-bottom: 36px
+}
+.title{
+  margin: 0 15px 0 15px;
+  text-align: center;
+  font-size: 24px;
+  color: #353535;
+  height: 48px;
+  /* background: green; */
+  line-height: 24px;
+}
+.date{
+  height: 15px;
+  line-height: 15px;
+  margin: 18px 15px 0 15px;
+
+}
+.date .part1{
+  font-size: 15px;
+  color: #888888;
+  float: left;
+  margin-right: 8px;
+}
+.date .part2{
+  font-size: 15px;
+  color: #576b95;
+  float: left;
+}
+.coverImg{
+  height: 240px;
+  margin: 20px 15px 15px 15px;
+}
+.coverImg image{
+  height: 240px;
+  width: 100%;
+}
+.desc{
+  /* background: green; */
+  padding:12px 12px;
+  margin: 0 15px 20px 15px;
+  font-size: 14px;
+  line-height: 22px;
+  color: #888888;
+}
+.info{
+  margin: 5px 15px;
+}
+
+

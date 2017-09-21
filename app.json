@@ -1,0 +1,27 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/homeclassification/index", 
+    "pages/homemenu/index", 
+    "pages/homeindex/index", 
+    "pages/member/index",   
+    "pages/manage/index",
+    "pages/webmenumanage/index",
+    "pages/logomanage/index",
+    "pages/productslistmanage/index",    
+    "pages/newslistmanage/index",
+    "pages/addnews/index",
+    "pages/addnewscontent/index" ,
+    "pages/editcontent/index",
+    "pages/editproducts/index",
+    "pages/addproducts/index",
+    "pages/addproductscontent/index",
+    "pages/preview/index"    
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#00a8f1",
+    "navigationBarTitleText": "闪电建站",
+    "navigationBarTextStyle":"#fff"
+  }
+}

@@ -1,0 +1,49 @@
+/* pages/logomanage/index.wxss */
+.section-warn{
+  height: 44px;
+  /* background: #888888;  */
+  position: relative;
+  border-bottom: 0.5px solid #e5e5e5;
+}
+.section-warn text{
+  font-size: 14px;
+  color: #888888;
+  position:absolute;  
+  bottom:12px;
+  left:15px;
+}
+.logo{
+  height: 130px;
+  width:100%;
+  border-bottom:0.5px solid #e5e5e5;
+}
+.banner{
+  height: 130px;
+  width:200px;
+  border-bottom: 0.5px solid #e5e5e5;
+}
+.logo image{
+  height:100px;
+  width:100px;
+  margin: 11px 0 11px 15px;
+}
+.banner image{
+  height:100px;
+  width:200px;
+  margin: 11px 0 11px 15px;
+}
+.btn{
+  background: #00a8f1;
+  margin: 30px auto;
+  height: 40px;
+  width: 90%;
+  border-radius:5px;
+  text-align: center;
+  line-height: 40px;
+  color: #ffffff;
+  font-size:17px;
+  /* background-size: "cover"; */
+}
+.disable-btn{
+  background: lightblue;
+}

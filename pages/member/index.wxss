@@ -1,0 +1,117 @@
+/**index.wxss**/
+.section_ad{
+  height: 180px;
+  background: gray;
+}
+.section_ad image{
+  height: 180px;
+  width: 100%;
+}
+
+.section_userinfo{
+  height: 100px;
+  width: 100%;
+  background: #ffffff;
+}
+.section_userinfo .userinfo{
+  float: left;
+  height: 100px;
+  width: 70%; 
+   /* padding-left: 15px;  */
+  /* background: green; */
+}
+.section_userinfo .logo{
+  padding-top:22px;
+  padding-bottom:22px;
+  margin-right:42px;
+  float:right;
+  height:56px;
+  width:15%;
+  /* background: yellow; */
+  
+}
+.section_userinfo .logo image{
+  height: 56px;
+  width: 56px;
+  border-radius:50%;
+  background: lightgray;
+}  
+.section_userinfo .userinfo .userinfo-nickname{
+  height: 50px;
+  /* padding-bottom: 6px;   */
+  position: relative;
+}
+.section_userinfo .userinfo .userinfo-nickname text{
+  position:absolute;  
+  bottom:0px;  
+  padding-bottom:0px;   
+  padding-left: 15px; 
+  margin:0px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #353535;  
+}
+.section_userinfo .userinfo .userinfo-number{
+  padding-top: 6px;
+  height: 44px;
+}
+.section_userinfo .userinfo .userinfo-number text{
+  margin:0px;
+  top: 0px;
+  font-size: 14px;
+  color: #888888;  
+  padding-left: 15px;
+}
+
+.section_web{
+  height:110px;
+  background:#ffffff;
+  margin-top:10px;
+}
+.section_web .webimage{
+  display: block;
+  height: 110px;
+  float: left;
+  /* background: blue; */
+}
+.section_web .webimage image{
+  height: 80px;
+  width: 70px;
+  margin: 15px 12px 15px 15px;  
+}
+.section_web .webinfo{
+  height: 110px;
+  display: block;
+  float: left;
+  /* background: lightblue; */
+}
+.section_web .webinfo view{
+  display: block;
+}
+.section_web .webinfo .webname image{
+  width:36px;
+  height:18px;
+  margin: 15px 9px 0 0;
+}
+.webname text{
+  font-size: 18px;
+  color: #353535;
+}
+.webip{
+  font-size: 13px;
+  color: #888888;
+  margin-top:4.5rpx;
+}
+.weburl{
+  font-size: 13px;
+  color: #888888;
+  margin-top:4rpx;
+}
+.webspace{
+  font-size: 13px;
+  color: #888888;
+  margin-top:4rpx;
+}
+
+
+
