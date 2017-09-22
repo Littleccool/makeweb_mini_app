@@ -1,6 +1,6 @@
 <!--pages/addnews/index.wxml-->
 <view class="cover" bindtap='coveractionSheetTap' data-upload-pic-type='coverpic'>
-  <image mode='aspectFit' src="{{coverImgSrc}}"></image>
+  <image mode='aspectFit' src="{{coverImgSrc ? coverImgSrc : '../../public/trueimages/+cover@2x.png'}}"></image>
 </view>
 <view class="clear"></view>
 <view class="section">
@@ -28,7 +28,7 @@
 </action-sheet>
 <view class="clear"></view>
 <view class="clear"></view>
-<view bindtap="preview" class="btn preview" hover-stay-time="100" hover-class="disable-btn">预览</view>
-<view bindtap="publish" class="btn publish" hover-stay-time="100" hover-class="disable-btn">发布</view>
+<view bindtap="preview" class="preview" hover-stay-time="100" hover-class="disable-btn">预览</view>
+<view bindtap="publish" class="publish" hover-stay-time="100" hover-class="disable-btn">发布</view>
 
 

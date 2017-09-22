@@ -15,7 +15,7 @@
   /* background: green;  */
   float: left;
   padding-left: 15px;
-  padding-right:14px;
+  padding-right:15px;
 }
 .section .manageinfo{
   /* background: red;  */
@@ -29,7 +29,7 @@
 .section .manage-image image{
   height: 120rpx;
   width: 120rpx;
-  margin: 11.5px;
+  margin-top:14px;
   border-radius:5px; 
 }
 .section .manageinfo .manage-title{
@@ -136,37 +136,13 @@
 .clipboarddata{
   text-align: center;
 }
-/* .copy{
-  margin:10px 0 0 25px;
-  height:40px;
-  text-align:center;
-  background:#5DC8FF;
-  font-size:18px;
-  line-height:40px;
-  border-top:1px solid #f8f8f8;
-  border-bottom:1px solid #f8f8f8;
-  border-radius: 5px;
-  color: #fff;
-  float:left;
-}
-.warn{
-  margin:10px 0 0 0;
-  text-align:center;
-  font-size:16px;
-  color:#999;
-  float:left;
-  height:40px;
-  line-height: 40px;
-  padding-left: 5px;
-} */
-
 .copy{
   margin:10px 0 0 0;
-  height:40px;
+  height:44px;
   text-align:center;
   background:#00a8f1;
-  font-size:14px;
-  line-height:40px;
+  font-size:18px;
+  line-height:44px;
   color: #f0f0f0;
   float:left;
   width: 65%;
@@ -176,11 +152,11 @@
 .warn{
   margin:10px 0 0 0;
   text-align:center;
-  font-size:16px;
+  font-size:18px;
   color:#333;
   float:left;
-  height:40px;
-  line-height: 40px;
+  height:44px;
+  line-height: 44px;
   width: 25%;
   background: #00a8f1;
   border-radius: 0 5px 5px 0;
@@ -188,7 +164,7 @@
 .tips{
   text-align: center;
   margin-top: 5px;
-  font-size: 12px;
+  font-size: 14px;
   color: #999;
   height: 16px;
   float: left;

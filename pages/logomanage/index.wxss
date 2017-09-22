@@ -13,24 +13,26 @@
   left:15px;
 }
 .logo{
-  height: 130px;
+  height: 134px;
   width:100%;
   border-bottom:0.5px solid #e5e5e5;
+  background:#ffffff;
 }
 .banner{
-  height: 130px;
-  width:200px;
+  height: 124px;
+  width:100%;
   border-bottom: 0.5px solid #e5e5e5;
+  background:#ffffff;
 }
 .logo image{
   height:100px;
   width:100px;
-  margin: 11px 0 11px 15px;
+  margin:17px 0 17px 15px;
 }
 .banner image{
-  height:100px;
-  width:200px;
-  margin: 11px 0 11px 15px;
+  height:88px;
+  width:181px;
+  margin:18px 0 18px 15px;
 }
 .btn{
   background: #00a8f1;

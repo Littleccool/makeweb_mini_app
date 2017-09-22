@@ -9,21 +9,26 @@
 }
 .content-info{
   clear:both;
+  background: #ffffff;
+  border-top:0.5px solid #e5e5e5;
+  border-bottom:0.5px solid #e5e5e5;
 }
 .content{
   height:55px;
   padding-top:15px;
   padding-left:15px;
+  background:#ffffff;
 }
 .content textarea{
-  color:#888888;
   overflow:hidden;
   height:45px;
+  font-size: 17px;
+  color: #353535;
 }
 .contentimg image{
-  margin-left: 15px;
-  height: 100px;
-  width: 100px; 
+  margin:0 0 20px 15px;
+  height:100px;
+  width:100px;
 }
 .btn{
   background:#00a8f1;
@@ -35,4 +40,5 @@
   line-height:40px;
   color:#ffffff;
   font-size:17px;
+  margin-top:30px;
 }

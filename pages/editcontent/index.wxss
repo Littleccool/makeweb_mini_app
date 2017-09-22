@@ -68,23 +68,6 @@
   overflow:hidden;
   width:90%;
 }
-.btn{
-  background: #00a8f1;
-  margin: 30px 5px;
-  height: 40px;
-  width: 45%;
-  border-radius:5px;
-  text-align: center;
-  line-height: 40px;
-  color: #ffffff;
-  font-size:17px;
-}
-.preview{
-  float: left;
-}
-.publish{
-  float: left;
-}
 .disable-btn{
   background: lightblue;
 }
@@ -95,7 +78,29 @@ action-sheet-item{
   padding:5px 0;
 }
 textarea{
-display: block;
-width: 100%;
-z-index: -1;
+  display: block;
+  width: 100%;
+  z-index: -1;
+}
+.preview{
+  border-top: 0.5px solid #e5e5e5;
+  height: 48px;
+  float: left;
+  width: 50%;
+  text-align: center;
+  font-size: 17px;
+  background: #ffffff;
+  color: #00a8f1;
+  line-height: 48px;
+}
+.publish{
+  border-top: 0.5px solid #e5e5e5;
+  height: 48px;
+  float: left;
+  width: 50%;
+  text-align: center;
+  font-size: 17px;
+  background: #00a8f1;
+  color: #ffffff;
+  line-height: 48px;
 }
