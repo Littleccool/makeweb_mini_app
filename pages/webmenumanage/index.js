@@ -49,6 +49,29 @@ Page({
   //     menuVal: menuVal
   //   })
   // },
+  changeName:function(e){
+    var that = this;
+    id = e.currentTarget.dataset.id;
+    orderNum = e.currentTarget.dataset.orderNum;
+    menuVal = e.currentTarget.dataset.menuVal;
+    that.setData({
+      id: id,
+      orderNum: orderNum,
+      menuVal: menuVal
+    })
+    wx.showActionSheet({
+      itemList: ['修改名称'],
+      success: function (res) {
+        console.log(res.tapIndex)
+        if (res.tapIndex == 0) {
+          that.bindMenu1()
+        }
+      },
+      fail: function (res) {
+        console.log(res.errMsg)
+      }
+    })
+  },
   actionSheetTap: function (e) {
     var that = this;  
     id = e.currentTarget.dataset.id;
@@ -97,8 +120,8 @@ Page({
     var that = this;
 
     wx.showModal({
-      title: '提示',
-      content: '确认删除这个菜单？',
+      title: '删除提示',
+      content: '删除后不可恢复，请谨慎操作！',
       success: function (res) {
         if (res.confirm) {
           wx.request({

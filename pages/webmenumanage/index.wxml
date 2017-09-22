@@ -9,9 +9,18 @@
       <text class="btn-name">添加菜单</text>
   </view>
   <view wx:for="{{menuList}}" wx:for-item="item" >
-    <view class="section_title" bindtap="actionSheetTap" data-menu-val="{{item.name}}" data-id="{{item.id}}" data-order-num="{{item.order_num}}">
+
+    <view wx:if="{{item.name == '产品展示' || item.name == '新闻中心'}}" class="section_title" bindtap="changeName" data-menu-val="{{item.name}}" data-id="{{item.id}}" data-order-num="{{item.order_num}}">
         <text>{{item.name}}</text>
     </view>
+    <view wx:else>
+      <view class="section_title" bindtap="actionSheetTap" data-menu-val="{{item.name}}" data-id="{{item.id}}" data-order-num="{{item.order_num}}">
+          <text>{{item.name}}</text>
+      </view>
+    </view>
+
+    
+
   </view>
 
   <view class="btn" bindtap="next" hover-stay-time="100" hover-class="disable-btn">下一步</view>
