@@ -172,6 +172,12 @@ Page({
   publish:function(){
     var that = this;
 
+    if (typeof (that.data.synopsis) == "undefined") {
+      that.setData({
+        synopsis: ''
+      })
+    }
+
     wx.removeStorageSync('html');
 
     var system_id = that.data.system_id ? that.data.system_id : app.debug.system_id;
@@ -180,16 +186,9 @@ Page({
         category_id: ''
       })
     }
-    if (typeof (that.data.res_id) == "undefined") {
-      app.util.showModal('提示', '请添加封面图片！', 'true');
-    } else if (typeof (that.data.title) == "undefined") {
+    if (typeof (that.data.title) == "undefined" || that.data.title == '') {
       app.util.showModal('提示', '请输入标题！', 'true');
-    } else if (typeof (that.data.synopsis) == "undefined") {
-      app.util.showModal('提示', '请输入内容简介！', 'true');
-    } else if (typeof (that.data.html) == "undefined") {
-      app.util.showModal('提示', '请输入正文内容！', 'true');
-    } else{
-
+    }else{
       wx.request({
         url: app.debug.apiurl + '/product/add',
         data: {
@@ -203,9 +202,9 @@ Page({
           }]) : '',
           synopsis: that.data.synopsis,
           info: that.data.html,
-          res: JSON.stringify([{
+          res: that.data.res_id ? JSON.stringify([{
             res_id: that.data.res_id
-          }])
+          }]) : ''
         },
         header: {
           "Content-Type": "application/x-www-form-urlencoded"

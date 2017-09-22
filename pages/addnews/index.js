@@ -170,6 +170,12 @@ Page({
   },
   publish:function(){
     var that = this;
+
+    if (typeof (that.data.synopsis) == "undefined") {
+      that.setData({
+        synopsis:''
+      })
+    }
     
     wx.removeStorageSync('html');
 
@@ -179,15 +185,10 @@ Page({
         category_id: '0'
       })
     }
-    if (typeof (that.data.res_id) == "undefined") {
-      app.util.showModal('提示', '请添加封面图片！', 'true');
-    } else if (typeof (that.data.title) == "undefined"){
+    if (typeof (that.data.title) == "undefined" || that.data.title == '') {
       app.util.showModal('提示', '请输入标题！', 'true');
-    } else if (typeof (that.data.synopsis) == "undefined") {
-      app.util.showModal('提示', '请输入内容简介！', 'true');
-    } else if (typeof (that.data.html) == "undefined") {
-      app.util.showModal('提示', '请输入正文内容！', 'true');
-    } else{
+    }else{
+      
       wx.request({
         url: app.debug.apiurl + '/article/add',
         data: {
