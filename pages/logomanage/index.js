@@ -1,6 +1,6 @@
 // pages/logomanage/index.js
 var app = getApp();
-var defaultImgSrc = app.debug.imgsrc + 'frame@2x.png';
+var defaultImgSrc = app.debug.imgsrc + 'banner@2x.png';
 var issmall;
 var banner_res_id, banner_url, logo_res_id, logo_txt,logo_type,logo_url;
 var style;

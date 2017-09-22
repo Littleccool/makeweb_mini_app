@@ -9,7 +9,7 @@
     <text>网站Banner</text>
 </view>
 <view data-banner-res-id="{{banner_res_id}}" class="banner" data-small="big" bindtap='actionSheetTap'>
-    <image mode='scaleToFill' src="{{banner_url?banner_url:'../../public/trueimages/banner@2x.png'}}"></image>
+    <image mode='scaleToFill' src="{{banner_url?banner_url:defaultImgSrc}}"></image>
 </view>
 <view class="btn" bindtap="publish" hover-stay-time="100" hover-class="disable-btn">下一步</view>
 
