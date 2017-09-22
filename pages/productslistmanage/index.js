@@ -150,6 +150,7 @@ Page({
         if (page != 1) {
           if (res.data.list.length > 0) {
             for (let i in res.data.list) {
+              res.data.list[i].synopsis = res.data.list[i].synopsis.replace(/\n/g, "")
               productList.push(res.data.list[i]);
             }
             that.setData({
@@ -163,9 +164,11 @@ Page({
             })
           }
         } else {
+          for (let i in res.data.list) {
+            res.data.list[i].synopsis = res.data.list[i].synopsis.replace(/\n/g, "")
+          }
           that.setData({
             productList: res.data.list,
-            reachBottom: true
           })
         }
         // that.setData({

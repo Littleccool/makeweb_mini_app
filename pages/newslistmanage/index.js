@@ -47,7 +47,6 @@ Page({
     wx.showActionSheet({
       itemList: ['编辑', '删除', '预览'],
       success: function (res) {
-        console.log(res.tapIndex)
         if (res.tapIndex == 0){
           that.bindMenu1()
         }
@@ -59,7 +58,6 @@ Page({
         }
       },
       fail: function (res) {
-        console.log(res.errMsg)
       }
     })
   },
@@ -158,10 +156,12 @@ Page({
         })
 
         var articleList = that.data.articleList;
+        
         //下拉刷新的时候
         if(page != 1){
           if (res.data.list.length > 0) {
             for (let i in res.data.list) {
+              res.data.list[i].synopsis = res.data.list[i].synopsis.replace(/\n/g, "")
               articleList.push(res.data.list[i]);
             }
             that.setData({
@@ -175,12 +175,13 @@ Page({
             })
           }
         }else{ //修改删除增加的时候
+          for (let i in res.data.list) {
+            res.data.list[i].synopsis = res.data.list[i].synopsis.replace(/\n/g, "")
+          }
           that.setData({
             articleList: res.data.list,
           })
         }
-        console.log(that.data.reachBottom)
-        console.log(that.data.articleList)
         // that.setData({
         //   articleList: res.data.list,
         // })

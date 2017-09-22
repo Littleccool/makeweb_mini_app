@@ -29,8 +29,8 @@
       <!-- </navigator> -->
     </view>
   </view>
+  <view class="reachBottom" hidden="{{reachBottom ? false : true}}">没有更多。</view>  
 </scroll-view> 
-<view class="reachBottom" hidden="{{reachBottom ? false : true}}">没有更多。</view>
 <view style="height:60px;"></view> 
 <view class="btn" bindtap="next" hover-stay-time="100" hover-class="disable-btn">下一步</view>
 <!--底部弹出框-->
