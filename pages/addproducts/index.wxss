@@ -5,10 +5,8 @@
 }
 .cover{
   height: 180px;
-   /* background: gray;  */
 }
 .cover image{
-  /* border: 1px solid black; */
   margin-top: 16.5px;
   height: 147px;
   width: 100%;
@@ -26,7 +24,6 @@
 .section{
   background: #ffffff;
   padding-left:15px;
-  /* height:44px;  */
 }
 .desc{
   height: 88px;
@@ -47,7 +44,6 @@
 .section .point{
   float: right;
   height:44px;
-  /* background: yellow; */
 }
 .section .point image{
   margin-top: 14px;
@@ -57,14 +53,12 @@
   padding-right: 0;
 }
 .section-area{
-  /* height: 118px; */
   padding-left:15px;
 }
 .section textarea{
   font-size:18px;
   color:#353535;
   height:80px;
-  /* margin-top:15px; */
   overflow:hidden;
   width:90%;
   z-index:10;
@@ -77,13 +71,6 @@
   overflow:hidden;
   width:90%;
 }
-/* .preview{
-  float: left;
-} */
-/* .publish{
-  float: left;
-  width: 100%;
-} */
 .disable-btn{
   background: lightblue;
 }
@@ -109,10 +96,3 @@ z-index: -1;
   color: #ffffff; 
   background: #00a8f1
 }
-/* .btn .preview{
-  width: 50%;
-  text-align: center;
-  font-size: 17px;
-  color: #00a8f1;  
-  background: #ffffff;
-} */

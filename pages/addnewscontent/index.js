@@ -68,7 +68,6 @@ Page({
     this.chooseWxImage('album');
   },
   chooseWxImage: function (type) {
-    // console.log(this.data.contentimgs[0].contentimg);
     var that = this;
     var ci = that.data.contentimgs;
     wx.chooseImage({
@@ -80,7 +79,6 @@ Page({
         var contentimgishidden = "contentimgs[" + that.data.imageIndex + "].contentimgishidden";
 
         //增加上传图片到服务器的逻辑
-        console.log(res.tempFilePaths[0]);
         wx.uploadFile({
           url: app.debug.apiurl + '/upload/image',
           filePath: res.tempFilePaths[0],
@@ -100,9 +98,7 @@ Page({
           success: function (res) {
             console.log('teststetasettstt');
             console.log(res.data)
-            
-            // console.log(res.data.rel.res_url)
-            // console.log(JSON.parse(res.data).rel.res_url)
+
             that.setData({
               [contentimg]: JSON.parse(res.data).rel.res_url,
               [contentimgishidden]: false
@@ -127,10 +123,8 @@ Page({
   },
   
   getcontenttext:function(e){
-    // console.log(111);
     contentIndex = e.currentTarget.dataset.contentIndex;
     var contenttext = "contenttexts[" + contentIndex + "]";
-    // console.log([contenttext],e.detail.value)
     this.setData({
       // [contenttext]: JSON.parse(e.detail.value)
       [contenttext]: e.detail.value
@@ -188,8 +182,6 @@ Page({
         console.log('cache fail');
       },
     })
-
-    
   },
   /**
    * 生命周期函数--监听页面加载
@@ -208,53 +200,4 @@ Page({
       }
     })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
-  }
 })

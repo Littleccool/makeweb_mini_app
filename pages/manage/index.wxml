@@ -14,10 +14,10 @@
         <text>修改网站菜单名字</text>
       </view>
     </view>
+    <view class="point">
+      <image src="{{imgsrc}}Path@2x.png"></image>
+    </view>
   </navigator>
-  <view class="point">
-    <image src="{{imgsrc}}Path@2x.png"></image>
-  </view>
 </view>
 <view class="section">
   <navigator url="/pages/logomanage/index?nextNewsId={{nextNewsId}}&nextProductsId={{nextProductsId}}" hover-class="navigator-hover">
@@ -32,10 +32,10 @@
         <text>上传于修改网站logo</text>
       </view>
     </view>
+    <view class="point">
+      <image src="{{imgsrc}}Path@2x.png"></image>
+    </view>
   </navigator>
-  <view class="point">
-    <image src="{{imgsrc}}Path@2x.png"></image>
-  </view>
 </view>
 
 <view wx:for="{{systemList}}" wx:for-index="idx" wx:for-item="item">

@@ -72,9 +72,7 @@ Page({
 
   // 封面图片上传上拉菜单以及正文内容上拉菜单
   coveractionSheetTap: function (e) {
-    // this.setData({
-    //   coveractionSheetHidden: !this.data.coveractionSheetHidden,
-    // })
+
     var that = this;
     wx.showActionSheet({
       itemList: ['拍照', '从手机相册选择'],
@@ -91,11 +89,7 @@ Page({
       }
     })
   },
-  // coveractionSheetbindchange: function () {
-  //   this.setData({
-  //     coveractionSheetHidden: !this.data.coveractionSheetHidden
-  //   })
-  // },
+
   bindMenu1: function () {
     this.setData({
       menu: 1,
@@ -259,17 +253,9 @@ Page({
           actionSheetItems: actionSheetItems
         })
       }
-    });
-
-    
+    });  
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
 
   /**
    * 生命周期函数--监听页面显示
@@ -312,39 +298,4 @@ Page({
       console.log(that.data.info);
     }
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
-  }
 })

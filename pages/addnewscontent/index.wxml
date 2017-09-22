@@ -18,9 +18,3 @@
   <button class='btn' hover-stay-time="100" hover-class="disable-btn">保存</button>
 </view>
 
-<!-- <action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetbindchange">
-    <block wx:for-items="{{actionSheetItems}}">
-        <action-sheet-item bindtap="bind{{item.bindtap}}">{{item.txt}}</action-sheet-item>
-    </block>
-    <action-sheet-cancel class="cancel">取消</action-sheet-cancel>
-</action-sheet> -->

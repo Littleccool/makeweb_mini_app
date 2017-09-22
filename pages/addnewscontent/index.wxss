@@ -12,7 +12,6 @@
 }
 .content{
   height:55px;
-  /* background:green; */
   padding-top:15px;
   padding-left:15px;
 }
@@ -20,10 +19,6 @@
   color:#888888;
   overflow:hidden;
   height:45px;
-}
-.contentimg{
-  /* height:110px; */
-  /* background: lightgreen; */
 }
 .contentimg image{
   margin-left: 15px;

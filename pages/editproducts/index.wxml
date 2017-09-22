@@ -2,13 +2,6 @@
 <view class="cover" bindtap='coveractionSheetTap' data-upload-pic-type='coverpic'>
   <image mode='aspectFit' src="{{coverImgSrc}}"></image>
 </view>
-<!-- <action-sheet hidden="{{coveractionSheetHidden}}" bindchange="coveractionSheetbindchange">
-    <block wx:for-items="{{coveractionSheetItems}}">
-        <action-sheet-item bindtap="bind{{item.bindtap}}">{{item.txt}}</action-sheet-item>
-    </block>
-    <action-sheet-cancel class="cancel">取消</action-sheet-cancel>
-</action-sheet> -->
-
 <view class="clear"></view>
 <view class="section">
   <input class="input" value="{{title}}" type="text" data-block-id="1" placeholder="请输入标题" bindblur='getTitle' />
