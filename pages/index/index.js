@@ -26,7 +26,7 @@ Page({
   },
   login:function(){
     var that = this;  
-    console.log(that.data.nickname, that.data.face_img, that.data.openid, that.data.username, that.data.password);
+    // console.log(that.data.nickname, that.data.face_img, that.data.openid, that.data.username, that.data.password);
       
     var telreg = /^(((1[3,7]{1}[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
     if (!telreg.test(that.data.username)) {
@@ -37,8 +37,6 @@ Page({
         var user = wx.getStorageSync('user');
 
         if (userInfo) {
-          console.log(user);
-          console.log(userInfo);
           that.setData({
             nickname: userInfo.nickName,
             face_img: userInfo.avatarUrl,
@@ -60,7 +58,6 @@ Page({
           },
           method: 'POST',
           success: function (res) {
-            console.log(res);
             if (res.data.user_id && res.data.user_id!= '0'){
               // app.debug.user_id = res.data.user_id;
               // app.debug.isLogin = true;
@@ -80,7 +77,6 @@ Page({
             }
           },
           fail: function (event) {
-            console.log(event);
             app.util.showModal('提示', '请检查网路连接是否正常连接', 'true')
           },
         })
@@ -95,10 +91,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // var userInfo = wx.getStorageSync('userInfo');
-    // var user = wx.getStorageSync('user');
-    // console.log('111111111111111111')
-    // console.log(userInfo)
+    
   },
 
   /**

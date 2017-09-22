@@ -25,7 +25,7 @@
     <button hover-class='btnClick' class='btnOk' bindtap='login'>登录</button>
   </view>
   <view class='notice'>
-    <text>新用户请在电脑上访问http://sd.35.com注册账号</text>
+    <text>新用户请在电脑上访问https://sd.35.com注册账号</text>
   </view>
 </view>
 

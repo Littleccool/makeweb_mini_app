@@ -112,6 +112,18 @@
   color: #888888;
   margin-top:4rpx;
 }
+.warn{
+  margin-top: 10px;
+  text-align: center;
+}
+.warn image{
+  height: 115px;
+}
+.warn text{
+  font-size: 14px;
+  color: #888888;
+  text-align: center;
+}
 
 
 

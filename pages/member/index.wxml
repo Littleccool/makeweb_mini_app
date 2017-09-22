@@ -15,7 +15,7 @@
        <image mode="aspectFill" src="{{userInfo.avatarUrl}}"></image>   
   </view>
 </view>
-<view wx:if="{{hostList}}">
+ <view wx:if="{{hostList.length > 0}}">
   <view wx:for="{{hostList}}" wx:for-index="idx" wx:for-item="item">
     <view class="section_web">
       <view  bindtap="redirect" data-api-url="{{item.api_url}}" data-host-id="{{item.host_id}}" hover-class="navigator-hover">
@@ -36,8 +36,12 @@
   </view>
 </view>
 <view wx:else>
-  sadfsdf
-</view>
+  <view class='warn'>
+    <image mode="aspectFit" src="{{imgsrc}}icon@2x.png"></image>
+    <view><text>新用户请在电脑上访问https://sd.35.com注册账号</text></view>
+  </view>
+</view> 
+
 
 
 

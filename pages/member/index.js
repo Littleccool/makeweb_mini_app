@@ -49,7 +49,7 @@ Page({
         }
       })
     }else{
-      app.util.showModal('提示', '不正确的参数，请联系管理员！', 'true')
+      app.util.showModal('提示', '不正确的参数！', 'true')
     }
   },
 

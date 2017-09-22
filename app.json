@@ -1,9 +1,6 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/homeclassification/index", 
-    "pages/homemenu/index", 
-    "pages/homeindex/index", 
     "pages/member/index",   
     "pages/manage/index",
     "pages/webmenumanage/index",
