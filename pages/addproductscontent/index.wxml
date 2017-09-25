@@ -1,12 +1,12 @@
 <!--pages/addnewscontent/index.wxml-->
 <view wx:for="{{contentimgs}}" wx:for-index="idx" wx:for-item="item">
   <view class="section">
-    <view class="pic-icon" bindtap="actionSheetTap" data-image-index="{{idx}}">
+    <view hidden='{{!item.contentimgishidden}}' class="pic-icon" bindtap="actionSheetTap" data-image-index="{{idx}}">
       <image src="{{imgsrc}}picture@2x.png"></image>
     </view>
     <view class="content-info">
       <view class="content">
-        <textarea value="{{contenttexts[idx]}}" bindinput="getcontenttext" placeholder="请添加文字或图片" data-content-index="{{idx}}" />
+        <textarea maxlength="-1" auto-height='true'value="{{contenttexts[idx]}}" bindinput="getcontenttext" placeholder="请添加文字或图片" data-content-index="{{idx}}" />
       </view>
        <view hidden='{{item.contentimgishidden}}' class="contentimg">
         <image mode='aspectFit' src='{{item.contentimg}}'></image>

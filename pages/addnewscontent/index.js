@@ -6,11 +6,13 @@ var imageIndex;  //定义修改图片的下标
 var contenttexts = []; //存储正文内容的数组
 var contentIndex;   //定义修改正文内容的下标
 var imageTemp;
+
 Page({
   data: {
     imageTemp: imageTemp,
     imgsrc: imgsrc,
     imageIndex: imageIndex,
+
     contenttexts: contenttexts,
     contentIndex: contentIndex,
     contentimgs: [
@@ -25,7 +27,6 @@ Page({
   },
 
   actionSheetTap: function (e) {
-    // console.log(222);
     imageIndex = e.currentTarget.dataset.imageIndex;
     this.setData({
       // actionSheetHidden: !this.data.actionSheetHidden,
@@ -44,7 +45,6 @@ Page({
         }
       },
       fail: function (res) {
-        console.log(res.errMsg)
       }
     })
   },
@@ -96,8 +96,6 @@ Page({
           method: 'POST',
 
           success: function (res) {
-            console.log('teststetasettstt');
-            console.log(res.data)
 
             that.setData({
               [contentimg]: JSON.parse(res.data).rel.res_url,
@@ -117,7 +115,6 @@ Page({
             contentimgs: ci,
           });
         }
-        // console.log(ci);
       }
     })
   },
@@ -125,10 +122,11 @@ Page({
   getcontenttext:function(e){
     contentIndex = e.currentTarget.dataset.contentIndex;
     var contenttext = "contenttexts[" + contentIndex + "]";
+
     this.setData({
-      // [contenttext]: JSON.parse(e.detail.value)
       [contenttext]: e.detail.value
     })
+
   },
   jump: function(){
     var that = this;
@@ -145,7 +143,6 @@ Page({
         var html = '';
         var contenttexts = '';
         var contentimgs = '';
-        // console.log(that.data.contentimgs, that.data.contenttexts);
         
         if (that.data.contentimgs && that.data.contenttexts) {
           if (that.data.contentimgs.length == 1) {
@@ -165,12 +162,10 @@ Page({
               html += contenttexts + "<br />" + contentimgs;
             }
           }
-          // console.log(html);
           wx.setStorage({
             key: 'html',
             data: html,
             success: function () {
-              // console.log('html cache success')
               wx.navigateBack({
                 url: 'pages/addnews/index',
               })
@@ -179,7 +174,6 @@ Page({
         }
       },
       fail: function (res) {
-        console.log('cache fail');
       },
     })
   },
@@ -188,11 +182,9 @@ Page({
    */
   onLoad: function (options) {
     var that = this;
-    console.log(this.data.contenttexts);
     wx.getStorage({
       key: 'info',
       success: function (res) {
-        console.log(res.data)
         that.setData({
           contentimgs: res.data.contentimgs,
           contenttexts: res.data.contenttexts
