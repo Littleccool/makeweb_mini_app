@@ -47,16 +47,15 @@
   left:15px;
 }
 .btn{
-  background: #00a8f1;
-  margin: 30px auto;
-  height: 40px;
-  width: 90%;
-  border-radius:5px;
-  text-align: center;
-  line-height: 40px;
-  color: #ffffff;
-  font-size:17px;
-  /* background-size: "cover"; */
+  background:#00a8f1;
+  height:44px;
+  border-radius:4px;
+  text-align:center;
+  line-height:44px;
+  color:#ffffff;
+  font-size:18px;
+  width: 345px;
+  margin:30px auto;
 }
 input{
   display:block;

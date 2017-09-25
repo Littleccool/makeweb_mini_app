@@ -33,14 +33,12 @@ textarea{
 }
 .btn{
   background:#00a8f1;
-  margin:30px autp;
-  height:40px;
+  margin:30px auto;
+  height:44px;
   border-radius:4px;
   text-align:center;
-  line-height:40px;
+  line-height:44px;
   color:#ffffff;
   font-size:18px;
-  margin-top:30px;
-  margin-bottom:30px;
   width: 345px;
 }

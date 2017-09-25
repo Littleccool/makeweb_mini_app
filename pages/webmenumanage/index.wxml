@@ -19,8 +19,6 @@
       </view>
     </view>
 
-    
-
   </view>
 
   <view class="btn" bindtap="next" hover-stay-time="100" hover-class="disable-btn">下一步</view>

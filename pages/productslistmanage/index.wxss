@@ -83,24 +83,23 @@
   display:block;
 }
 .btn{
-  background: #00a8f1;
-  margin: 10px auto;
-  height: 40px;
-  width: 90%;
-  border-radius:5px;
-  text-align: center;
-  line-height: 40px;
-  color: #ffffff;
-  font-size:17px;
+  background:#00a8f1;
+  margin:30px auto;
+  height:44px;
+  border-radius:4px;
+  text-align:center;
+  line-height:44px;
+  color:#ffffff;
+  font-size:18px;
+  width: 345px;
   position: fixed;
   z-index: 100;
   bottom: 0;
   left: 0;
   right: 0; 
-  /* background-size: "cover"; */
 }
 .reachBottom {
-  margin: 0px;
+  margin-bottom:10px;
   padding: 0px;
   height: 40px;
   line-height: 40px;

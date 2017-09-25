@@ -15,7 +15,7 @@
 </view>
 <view class="clear"></view>
 <view class="section desc">
-  <textarea bindblur='getSynopsis' placeholder='请输入内容简介' maxlength='250'></textarea>
+  <textarea auto-height='true' bindblur='getSynopsis' placeholder='请输入内容简介' maxlength='250'></textarea>
 </view>
 <view class="clear"></view>
 
