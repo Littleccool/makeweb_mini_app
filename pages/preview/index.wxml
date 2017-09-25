@@ -10,7 +10,7 @@
   </view>
 </view>
 <view class='desc'>
-  {{synopsis ? synopsis :""}}
+  <text>{{synopsis ? synopsis :""}}</text>
 </view>
 <view class='coverImg'>
   <image mode="aspectFit" src='{{coverImgSrc}}'></image>

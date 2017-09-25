@@ -22,7 +22,7 @@
   padding-left:15px;
 }
 .desc{
-  height: 88px;
+  /* height: 88px; */
   padding-top: 15px;
 }
 .desc textarea{
@@ -55,10 +55,10 @@
 .section textarea{
   font-size:18px;
   color:#353535;
-  height:80px;
-  overflow:hidden;
+  /* height:80px; */
   width:90%;
   z-index:10;
+  padding-bottom:10px;
 }
 .section-area textarea{
   font-size:18px;
@@ -92,6 +92,9 @@ textarea{
   background: #ffffff;
   color: #00a8f1;
   line-height: 48px;
+  position: fixed;
+  bottom: 0;
+  left:0;
 }
 .publish{
   border-top: 0.5px solid #e5e5e5;
@@ -103,4 +106,7 @@ textarea{
   background: #00a8f1;
   color: #ffffff;
   line-height: 48px;
+  position: fixed;
+  bottom: 0;
+  right:0;
 }

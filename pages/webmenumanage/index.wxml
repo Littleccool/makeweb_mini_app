@@ -23,7 +23,7 @@
 
   <view class="btn" bindtap="next" hover-stay-time="100" hover-class="disable-btn">下一步</view>
 
-  <modal hidden="{{hiddenmodalput}}" style="border-radius:4rpx;" title="提示信息" confirm-text="提交" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">  
+  <modal hidden="{{hiddenmodalput}}" style="border-radius:8rpx;font-size: 18px;" title="提示信息" confirm-text="提交" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">  
       <input value="{{menuVal}}" bindinput="getMenuName" disabled='{{isInput}}' type='text' placeholder="请输入新的菜单名称" auto-focus/> 
   </modal>  
 

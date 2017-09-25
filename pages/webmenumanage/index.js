@@ -120,6 +120,8 @@ Page({
     var that = this;
 
     wx.showModal({
+      confirmColor: '#00a8f1',
+      cancelColor: '#333333',
       title: '删除提示',
       content: '删除后不可恢复，请谨慎操作！',
       success: function (res) {

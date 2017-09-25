@@ -8,7 +8,7 @@
 </view>
 <view class="clear"></view>
 <view class="section desc">
-  <textarea value="{{synopsis}}" bindinput='getSynopsis' placeholder='请输入内容简介' maxlength='250'></textarea>
+  <textarea auto-height='true' value="{{synopsis}}" bindinput='getSynopsis' placeholder='请输入内容简介' maxlength='250'></textarea>
 </view>
 <view class="clear"></view>
 

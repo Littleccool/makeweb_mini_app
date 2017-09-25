@@ -84,13 +84,19 @@ width: 100%;
 z-index: -1;
 }
 .btn{
+  margin:30px auto;
   background: #00a8f1;
-  height: 48px;
+  height: 44px;
   width:90%;
-  line-height: 48px;
-  margin:0 auto;
+  line-height: 44px;
   text-align:center;
-  font-size: 17px;
+  font-size: 18px;
   color: #ffffff; 
-  background: #00a8f1
+  background: #00a8f1;
+  border-radius: 4px;
+}
+.disable-btn{
+  background: #0299db;
+  opacity:0.6;
+  filter: Alpha(opacity=60)
 }

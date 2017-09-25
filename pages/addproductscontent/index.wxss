@@ -42,3 +42,8 @@ textarea{
   font-size:18px;
   width: 345px;
 }
+.disable-btn{
+  background: #0299db;
+  opacity:0.6;
+  filter: Alpha(opacity=60)
+}
