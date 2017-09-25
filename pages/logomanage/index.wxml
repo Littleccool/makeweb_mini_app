@@ -1,6 +1,6 @@
 <!--pages/logomanage/index.wxml-->
 <view class="section-warn">
-    <text>网站小logo</text>
+    <text>网站logo</text>
 </view>
 <view data-logo-res-id="{{logo_res_id}}" class="logo" data-small="small" bindtap='actionSheetTap'>
     <image mode='scaleToFill' src="{{logo_url?logo_url:defaultImgSrc}}"></image>

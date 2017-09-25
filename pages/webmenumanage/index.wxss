@@ -30,7 +30,7 @@
   font-size: 18px;
   color: #00a8f1;
   position:absolute;
-  bottom:12px;
+  bottom:10px;
 }
 .container .section_title{
   height: 44px;
