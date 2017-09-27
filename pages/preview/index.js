@@ -48,7 +48,8 @@ Page({
               coverImgSrc: res.data.info.res.res_url,
               res_id: res.data.info.res.res_id,
               synopsis: res.data.info.synopsis,
-              title: res.data.info.title
+              title: res.data.info.title,
+              time:res.data.info.time
             });
             WxParse.wxParse('info', 'html', that.data.info, that, 5);
 
@@ -78,7 +79,8 @@ Page({
               coverImgSrc: res.data.info.res.length > 0 ? res.data.info.res[0].res_url : '',
               res_id: res.data.info.res.length > 0 ? res.data.info.res[0].res_id : '',
               synopsis: res.data.info.synopsis,
-              title: res.data.info.title
+              title: res.data.info.title,
+              time: res.data.info.time
             })
             WxParse.wxParse('info', 'html', that.data.info, that, 5);
           }
@@ -97,7 +99,8 @@ Page({
           info: html,
           coverImgSrc: coverImgSrc,
           synopsis: synopsis,
-          title: title
+          title: title,
+          time:''
         });
         WxParse.wxParse('info', 'html', html, that, 5);
       }

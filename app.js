@@ -14,7 +14,8 @@ App({
     var that = this
     var username = wx.getStorageSync('username');
     var user_id = wx.getStorageSync('user_id');
-    if (user_id && username) {
+    console.log(username,user_id)
+    if (user_id) {
       //如果用户已经登录过小程序，则直接跳转
       wx.redirectTo({
         url: '/pages/member/index?username=' + username,

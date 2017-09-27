@@ -217,7 +217,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log('onLoad')
+
     var that = this;
     nextNewsId = options.nextNewsId;
     nextProductsId = options.nextProductsId
@@ -234,7 +234,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function (options) {
-    console.log('onShow')
+    wx.removeStorageSync('info')
     var isNewsRefresh = wx.getStorageSync('isNewsRefresh')
     if (isNewsRefresh){
       var that = this;

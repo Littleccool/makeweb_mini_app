@@ -5,7 +5,7 @@
     <text>{{title}}</text>
   </view>
   <view class='date'>
-    <view class='part1'>2017-09-15</view>
+    <view class='part1'>{{time ?time : ''}}</view>
     <view class='part2'>{{category_name ? category_name : ''}}</view>
   </view>
 </view>

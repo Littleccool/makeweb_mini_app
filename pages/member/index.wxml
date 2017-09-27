@@ -20,7 +20,7 @@
     <view class="section_web">
       <view  bindtap="redirect" data-api-url="{{item.api_url}}" data-host-id="{{item.host_id}}" hover-class="navigator-hover">
         <view class='webimage'>
-          <image mode="aspectFit" src="{{imgsrc}}icon@2x.png"></image>
+          <image mode="aspectFit" src="{{item.img_link}}"></image>
         </view>
         <view class='webinfo'>
           <view class='webname'>

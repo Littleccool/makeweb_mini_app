@@ -112,9 +112,9 @@
 </view> -->
 
 <view class="section_web">
-  <view  data-api-url="{{item.api_url}}" data-host-id="{{item.host_id}}">
+  <view  data-api-url="{{hostInfo.api_url}}" data-host-id="{{hostInfo.host_id}}">
     <view class='webimage'>
-      <image mode="aspectFit" src="{{imgsrc}}icon@2x.png"></image>
+      <image mode="aspectFit" src="{{hostInfo.img_link}}"></image>
     </view>
     <view class='webinfo'>
       <view class='webname'>
