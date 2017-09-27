@@ -143,7 +143,7 @@ Page({
               that.getMenu();
             }
           });
-          this.setData({
+          that.setData({
             menu: 2,
             // actionSheetHidden: !this.data.actionSheetHidden
           })
@@ -161,7 +161,6 @@ Page({
     })
   },
   getMenuName:function(e){
-    console.log(e)
     menuName = e.detail.value;
     this.setData({
       menuName: menuName
@@ -183,7 +182,6 @@ Page({
       changeType: changeType,
       isInput: false
     })
-    console.log(changeType);
     if (changeType == 'add'){
       this.setData({
         menuVal:''
@@ -192,7 +190,6 @@ Page({
   },
   //取消按钮  
   cancel: function () {
-    console.log('cancel');
     this.setData({
       hiddenmodalput: true
     });
@@ -202,6 +199,10 @@ Page({
     var that = this;
     // console.log('confirm');
     if (that.data.changeType == 'add'){
+      if(that.data.menuName == ''){
+        app.util.showModal('提示', '请输入菜单名称！', 'true');
+        return;
+      }
       wx.request({
         url: app.debug.apiurl + '/menu/add',
         data: {
@@ -215,7 +216,9 @@ Page({
         },
         method: 'POST',
         success: function (res) {
-          console.log(res);
+          that.setData({
+            menuName : ''
+          })
           that.getMenu();
         }
       })
