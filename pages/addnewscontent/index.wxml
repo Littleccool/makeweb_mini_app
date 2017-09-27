@@ -10,7 +10,7 @@
         <!-- <textarea bindlinechange='addline'></textarea> -->
       </view>
        <view hidden='{{item.contentimgishidden}}' class="contentimg">
-        <image mode='aspectFit' src='{{item.contentimg}}'></image>
+        <image mode='center' src='{{item.contentimg}}'></image>
       </view> 
     </view>
   </view>

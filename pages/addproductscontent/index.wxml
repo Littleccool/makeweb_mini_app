@@ -9,7 +9,7 @@
         <textarea maxlength="-1" auto-height='true'value="{{contenttexts[idx]}}" bindinput="getcontenttext" placeholder="请添加文字或图片" data-content-index="{{idx}}" />
       </view>
        <view hidden='{{item.contentimgishidden}}' class="contentimg">
-        <image mode='aspectFit' src='{{item.contentimg}}'></image>
+        <image mode='center' src='{{item.contentimg}}'></image>
       </view> 
     </view>
   </view>

@@ -1,13 +1,8 @@
 <!--pages/addnews/index.wxml-->
 <view class="cover" bindtap='coveractionSheetTap' data-upload-pic-type='coverpic'>
-  <image mode='aspectFit' src="{{coverImgSrc}}"></image>
+  <view wx:if='{{coverImgSrc != "../../public/trueimages/+cover@2x.png"}}'><image mode='center' src="{{coverImgSrc}}"></image></view>
+  <view wx:else><image src="{{coverImgSrc}}"></image></view>
 </view>
-<!-- <action-sheet hidden="{{coveractionSheetHidden}}" bindchange="coveractionSheetbindchange">
-    <block wx:for-items="{{coveractionSheetItems}}">
-        <action-sheet-item bindtap="bind{{item.bindtap}}">{{item.txt}}</action-sheet-item>
-    </block>
-    <action-sheet-cancel class="cancel">取消</action-sheet-cancel>
-</action-sheet> -->
 
 <view class="clear"></view>
 <view class="section">

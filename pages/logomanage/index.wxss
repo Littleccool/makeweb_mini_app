@@ -27,8 +27,8 @@
   text-align:center;
 }
 .logo image{
-  height:100px;
-  width:100px;
+  height:88px;
+  width:181px;
   margin:17px 0 17px 15px;
 }
 .banner image{

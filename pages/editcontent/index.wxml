@@ -1,6 +1,6 @@
 <!--pages/addnews/index.wxml-->
 <view class="cover" bindtap='coveractionSheetTap' data-upload-pic-type='coverpic'>
-  <image mode='aspectFit' src="{{coverImgSrc ? coverImgSrc : '../../public/trueimages/+cover@2x.png'}}"></image>
+  <image mode='center' src="{{coverImgSrc ? coverImgSrc : '../../public/trueimages/+cover@2x.png'}}"></image>
 </view>
 <view class="clear"></view>
 <view class="section">

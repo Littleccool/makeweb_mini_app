@@ -7,8 +7,7 @@
   height: 180px;
 }
 .cover image{
-  margin-top: 16.5px;
-  height: 147px;
+  height: 180px;
   width: 100%;
 }
 .input{
