@@ -77,12 +77,12 @@ Page({
             }
           },
           fail: function (event) {
-            app.util.showModal('提示', '请检查网路连接是否正常连接', 'true')
+            app.util.showModal('提示', '系统发生错误！', 'true')
           },
         })
 
       } catch (e) {
-        app.util.showModal('提示', '系统发生错误,请联系管理员！', 'true')
+        app.util.showModal('提示', '系统发生错误！', 'true')
       }
     }
 
