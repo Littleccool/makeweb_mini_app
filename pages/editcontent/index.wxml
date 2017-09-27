@@ -1,6 +1,6 @@
 <!--pages/addnews/index.wxml-->
 <view class="cover" bindtap='coveractionSheetTap' data-upload-pic-type='coverpic'>
-  <image mode='center' src="{{coverImgSrc ? coverImgSrc : '../../public/trueimages/+cover@2x.png'}}"></image>
+  <image mode='{{coverImgSrc ? center : ""}}' src="{{coverImgSrc ? coverImgSrc : '../../public/trueimages/+cover@2x.png'}}"></image>
 </view>
 <view class="clear"></view>
 <view class="section">
@@ -20,12 +20,12 @@
     <image src="{{imgsrc}}Path@2x.png"></image>
   </view>
 </view>
-<action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetbindchange">
+<!-- <action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetbindchange">
     <block wx:for-items="{{actionSheetItems}}"  wx:for-item="item">
         <action-sheet-item bindtap='getCategoryId' data-name="{{item.name}}" data-id="{{item.id}}">{{item.name}}</action-sheet-item>
     </block>
     <action-sheet-cancel class="cancel">取消</action-sheet-cancel>
-</action-sheet>
+</action-sheet> -->
 <view class="clear"></view>
 <view class="clear"></view>
 <view bindtap="preview" class="preview" hover-stay-time="100" hover-class="disable-btn">预览</view>

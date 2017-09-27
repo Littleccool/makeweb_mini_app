@@ -10,7 +10,7 @@
 </view>
 <view class="clear"></view>
 <view class="section desc">
-  <textarea auto-height='true' bindblur='getSynopsis' placeholder='请输入内容简介' maxlength='250'></textarea>
+  <textarea bindblur='getSynopsis' placeholder='请输入内容简介' maxlength='250'></textarea>
 </view>
 <view class="clear"></view>
 
@@ -22,12 +22,6 @@
     <image src="{{imgsrc}}Path@2x.png"></image>
   </view>
 </view>
-<action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetbindchange">
-    <block wx:for-items="{{actionSheetItems}}"  wx:for-item="item">
-        <action-sheet-item bindtap='getCategoryId' data-name="{{item.name}}" data-id="{{item.id}}">{{item.name}}</action-sheet-item>
-    </block>
-    <action-sheet-cancel class="cancel">取消</action-sheet-cancel>
-</action-sheet>
 <view class="clear"></view>
 <navigator url="/pages/addproductscontent/index" hover-class="navigator-hover">
   <view class="section">
@@ -36,7 +30,7 @@
 </navigator> 
 <view class="clear"></view>
 <view class='btn'>
-  <!-- <view class="preview" hover-stay-time="100" hover-class="disable-btn">预览</view> -->
+  <view bindtap="preview" class="preview" hover-stay-time="100" hover-class="disable-btn">预览</view>
   <view bindtap='publish' class="publish" hover-stay-time="100" hover-class="disable-btn">发布</view>
 </view>
 

@@ -24,7 +24,7 @@ Page({
     swiperCurrentIndex: swiperCurrentIndex,
     category_id: category_id,
     content: content,
-    actionSheetHidden: true,
+    // actionSheetHidden: true,
     // coveractionSheetHidden: true,
     // actionSheetItems: [
     //   { bindtap: 'select', menuList: ['分类1','分类2']}
@@ -39,34 +39,40 @@ Page({
   },
 
   // 分类上拉菜单
+  // actionSheetTap: function () {
+  //   this.setData({
+  //     actionSheetHidden: !this.data.actionSheetHidden
+  //   })
+  // },
   actionSheetTap: function () {
-    this.setData({
-      actionSheetHidden: !this.data.actionSheetHidden
-    })
-  },
-  actionSheetbindchange: function () {
-    this.setData({
-      actionSheetHidden: !this.data.actionSheetHidden
-    })
-  },
-  bindselect: function (e) {
-    category_id = e.currentTarget.dataset.category_id;
-    // console.log(category_id);
-    this.setData({
-      menu: 1,
-      actionSheetHidden: !this.data.actionSheetHidden,
-      category_id: category_id
-    })
-  },
-
-  getCategoryId: function(e){
-    var categoryId = e.currentTarget.dataset.id;
-    categoryName = e.currentTarget.dataset.name;
-    this.setData({
-      menu: 1,
-      actionSheetHidden: !this.data.actionSheetHidden,
-      category_id: categoryId,
-      categoryName: categoryName
+    var that = this;
+    var actionSheetItems = that.data.actionSheetItems;
+    var itemList = [];
+    var idList = [];
+    for (let i in actionSheetItems){
+      itemList.push(actionSheetItems[i]['name']);
+      idList.push(actionSheetItems[i]['id']);
+    }
+    wx.showActionSheet({
+      itemList: itemList,
+      success: function (res) {
+        // console.log(res.tapIndex)
+        // console.log(itemList);
+        // console.log(idList);
+        that.setData({
+          menu: 1,
+          // actionSheetHidden: !this.data.actionSheetHidden,
+          category_id: idList[res.tapIndex],
+          categoryName: itemList[res.tapIndex]
+        })
+        wx.setStorage({
+          key: 'categoryName',
+          data: that.data.categoryName,
+        })
+      },
+      fail: function (res) {
+        console.log(res.errMsg)
+      }
     })
   },
 
@@ -127,11 +133,19 @@ Page({
     this.setData({
       title: title
     })
+    wx.setStorage({
+      key: 'title',
+      data: title,
+    })
   },
   getSynopsis:function(e){
     synopsis = e.detail.value;
     this.setData({
       synopsis: synopsis
+    })
+    wx.setStorage({
+      key: 'synopsis',
+      data: synopsis,
     })
   },
 
@@ -156,7 +170,16 @@ Page({
       method: 'POST',
 
       success: function (res) {
+        console.log(res)
         res_id = JSON.parse(res.data).rel.res_id;
+        
+        //添加时预览的图片路径缓存
+        var res_url = JSON.parse(res.data).rel.res_url;
+        wx.setStorage({
+          key: "res_url",
+          data: res_url
+        })
+        
         if (res_id) {
           that.setData({
             res_id: res_id
@@ -226,10 +249,28 @@ Page({
       });
     }
   },
+  preview: function () {
+    var that = this;
+    wx.navigateTo({
+      url: '/pages/preview/index?system_id=' + that.data.system_id + '&manageType=news',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
+    //删除字段缓存防止字段未增加预览到缓存内容
+    try {
+      wx.removeStorageSync('res_url')
+      wx.removeStorageSync('title')
+      wx.removeStorageSync('synopsis')
+      wx.removeStorageSync('categoryName')
+      wx.removeStorageSync('html')
+    } catch (e) {
+      // Do something when catch error
+    }
+
     var that = this;
     var system_id = options.system_id;
 

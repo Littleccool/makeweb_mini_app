@@ -22,45 +22,42 @@ Page({
     selectType: selectType,
     content: content,
     system_id: system_id,
-    actionSheetHidden: true,
-    // coveractionSheetHidden: true,
-    // actionSheetItems: [
-    //   { bindtap: 'select', menuList: ['分类1','分类2']}
-    // ],
     actionSheetItems:[],
-    // coveractionSheetItems: [
-    //   { bindtap: 'Menu1', txt: '拍照' },
-    //   { bindtap: 'Menu2', txt: '从手机相册选择' }
-    // ],
     menu: ''
   },
 
-  // 分类上拉菜单
   actionSheetTap: function () {
-    this.setData({
-      actionSheetHidden: !this.data.actionSheetHidden
-    })
-  },
-  actionSheetbindchange: function () {
-    this.setData({
-      actionSheetHidden: !this.data.actionSheetHidden
-    })
-  },
-  bindselect: function (e) {
-    selectType = e.currentTarget.dataset.selectType;
-    // console.log(selectType);
-    this.setData({
-      menu: 1,
-      actionSheetHidden: !this.data.actionSheetHidden,
-      selectType: selectType
+    var that = this;
+    var actionSheetItems = that.data.actionSheetItems;
+    var itemList = [];
+    var idList = [];
+    for (let i in actionSheetItems) {
+      itemList.push(actionSheetItems[i]['name']);
+      idList.push(actionSheetItems[i]['id']);
+    }
+    wx.showActionSheet({
+      itemList: itemList,
+      success: function (res) {
+        // console.log(res.tapIndex)
+        // console.log(itemList);
+        // console.log(idList);
+        that.setData({
+          menu: 1,
+          // actionSheetHidden: !this.data.actionSheetHidden,
+          category_id: idList[res.tapIndex],
+          category_name: itemList[res.tapIndex]
+        })
+      },
+      fail: function (res) {
+        console.log(res.errMsg)
+      }
     })
   },
 
+
   // 封面图片上传上拉菜单以及正文内容上拉菜单
   coveractionSheetTap: function (e) {
-    // this.setData({
-    //   coveractionSheetHidden: !this.data.coveractionSheetHidden,
-    // })
+
     var that = this;    
     wx.showActionSheet({
       itemList: ['拍照', '从手机相册选择'],
@@ -77,11 +74,7 @@ Page({
       }
     })
   },
-  // coveractionSheetbindchange: function () {
-  //   this.setData({
-  //     coveractionSheetHidden: !this.data.coveractionSheetHidden
-  //   })
-  // },
+
   bindMenu1: function () {
     this.setData({
       menu: 1,
@@ -229,20 +222,8 @@ Page({
         }
       }
     })
-    // wx.navigateTo({
-    //   url: '/pages/preview/index?system_id=' + that.data.system_id + '&id=' + this.data.id + '&manageType=news'
-    // })
   },
-  getCategoryId: function (e) {
-    var categoryId = e.currentTarget.dataset.id;
-    category_name = e.currentTarget.dataset.name;
-    this.setData({
-      menu: 1,
-      actionSheetHidden: !this.data.actionSheetHidden,
-      category_id: categoryId,
-      category_name: category_name
-    })
-  },
+  
   /**
    * 生命周期函数--监听页面加载
    */
