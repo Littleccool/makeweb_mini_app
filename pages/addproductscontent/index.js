@@ -151,13 +151,13 @@ Page({
           if (that.data.contentimgs.length == 1) {
             html = that.data.contenttexts[0];
           }else{
-            for (var i = 0; i < that.data.contentimgs.length - 1; i++) {
+            for (var i = 0; i < that.data.contentimgs.length; i++) {
               if (that.data.contenttexts[i]) {
                 contenttexts = "<p>" + that.data.contenttexts[i] + "</p>";
               } else {
                 contenttexts = "";
               }
-              if (that.data.contentimgs[i]) {
+              if (that.data.contentimgs[i].contentimg != '../../public/trueimages/picture@2x.png') {
                 contentimgs = "<div style='text-align:center'><img style='margin:0 auto;' src='" + that.data.contentimgs[i]['contentimg'] + "'></div>";
               } else {
                 contentimgs = '';

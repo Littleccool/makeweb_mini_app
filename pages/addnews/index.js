@@ -276,13 +276,13 @@ Page({
         if (returninfo.contentimgs.length == 1) {
           info = that.data.html;
         } else {
-          for (var i = 0; i < returninfo.contentimgs.length - 1; i++) {
+          for (var i = 0; i < returninfo.contentimgs.length; i++) {
             if (returninfo.contenttexts[i]) {
               contenttexts = returninfo.contenttexts[i];
             } else {
               contenttexts = "";
             }
-            if (returninfo.contentimgs[i]) {
+            if (returninfo.contentimgs[i].contentimg != '../../public/trueimages/picture@2x.png') {
               contentimgs = "[图片]";
             } else {
               contentimgs = '';
