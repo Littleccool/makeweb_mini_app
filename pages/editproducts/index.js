@@ -251,7 +251,7 @@ Page({
           category_id: res.data.info.category.length >0 ? res.data.info.category[0].id : '',
           category_name: res.data.info.category.length > 0 ? res.data.info.category[0].name : '',
           info: res.data.info.info,
-          coverImgSrc: res.data.info.res[0].res_url,
+          coverImgSrc: res.data.info.res.length > 0 ? res.data.info.res[0].res_url : '',
           res_id: res.data.info.category.length > 0 ? res.data.info.res[0].res_id : '',      
           synopsis: res.data.info.synopsis,
           title: res.data.info.title
