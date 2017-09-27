@@ -162,7 +162,6 @@ Page({
   },
   publish: function () {
     var that = this;
-    console.log(this.data.info);
     wx.request({
       url: app.debug.apiurl + '/product/edit',
       data: {
@@ -202,9 +201,45 @@ Page({
   },
   preview: function () {
     var that = this;
-    wx.navigateTo({
-      url: '/pages/preview/index?system_id=' + that.data.system_id + '&id=' + this.data.id + '&manageType=products'
+    wx.request({
+      url: app.debug.apiurl + '/product/edit',
+      data: {
+        // user_id: app.debug.user_id,
+        host_id: app.debug.host_id,
+        site_id: app.debug.site_id,
+        system_id: that.data.system_id ? that.data.system_id : app.debug.system_id,
+        id: that.data.id,
+        title: that.data.title,
+        // category_id: that.data.category_id,
+        category: JSON.stringify([{
+          id: that.data.category_id,
+        }]),
+        synopsis: that.data.synopsis,
+        info: that.data.info,
+        res: JSON.stringify([{
+          res_id: that.data.res_id
+        }])
+      },
+      header: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      method: 'POST',
+      success: function (res) {
+        console.log(res);
+        if (res.data.msg == 'success') {
+          wx.setStorage({
+            key: 'isProductsRefresh',
+            data: true,
+          })
+          wx.navigateTo({
+            url: '/pages/preview/index?system_id=' + that.data.system_id + '&id=' + that.data.id + '&manageType=products',
+          })
+        }
+      }
     })
+    // wx.navigateTo({
+    //   url: '/pages/preview/index?system_id=' + that.data.system_id + '&id=' + this.data.id + '&manageType=products'
+    // })
   },
   getCategoryId: function (e) {
     var categoryId = e.currentTarget.dataset.id;
