@@ -131,6 +131,7 @@ Page({
   jump: function(){
     var that = this;
     
+    
     //将正文内容户进行缓存，下次增加正文内容的时候可以正常回显
     wx.setStorage({
       key: 'info',
@@ -165,15 +166,22 @@ Page({
               html += contenttexts + "<br />" + contentimgs;
             }
           }
-          wx.setStorage({
-            key: 'html',
-            data: html,
-            success: function () {
-              wx.navigateBack({
-                url: 'pages/addnews/index',
-              })
-            }
-          })
+
+          if (that.data.contenttexts == 0){
+            app.util.showModal('提示', '正文内容不能为空', 'true');
+            return ;
+          }else{
+            wx.setStorage({
+              key: 'html',
+              data: html,
+              success: function () {
+                wx.navigateBack({
+                  url: 'pages/addnews/index',
+                })
+              }
+            })
+          }
+          
         }
       },
       fail: function (res) {

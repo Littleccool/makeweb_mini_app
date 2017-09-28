@@ -165,15 +165,22 @@ Page({
               html += contenttexts + "<br />" + contentimgs;
             }
           }
-          wx.setStorage({
-            key: 'html',
-            data: html,
-            success: function () {
-              wx.navigateBack({
-                url: 'pages/addproducts/index',
-              })
-            }
-          })
+
+          if (that.data.contenttexts == 0) {
+            app.util.showModal('提示', '正文内容不能为空', 'true');
+            return;
+          }else{
+            wx.setStorage({
+              key: 'html',
+              data: html,
+              success: function () {
+                wx.navigateBack({
+                  url: 'pages/addproducts/index',
+                })
+              }
+            })
+          }
+          
         }
       },
       fail: function (res) {
